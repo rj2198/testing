@@ -27,7 +27,6 @@ import Confirmation from './Components/Confirmation';
 //import DriverPortal from './Components/DriverPortal';
 //import RestaurantPortal from './Components/RestaurantPortal';
 import DashPass from './Components/DashPass';
-import VerticalNavbar from './Components/VerticalNavbar';
 import DriverPortal from './Components/DriverPortal';
 import IHOP from './Components/ihop';
 import KFC from './Components/KFC';
@@ -55,7 +54,7 @@ function App() {
       <Header />
       <FoodCategoryList restaurants={restaurants}/>
       <Routes>
-        <Route path="/" element={ <McDonalds/> } />
+        <Route path="mcdonalds" element={ <McDonalds/> } />
         <Route path="burger-king" element={ <BurgerKing/> } />
         <Route path="wendys" element={ <Wendys/> } />
         <Route path="in-and-out" element={ <InAndOut/> } />
@@ -78,11 +77,10 @@ function App() {
         <Route path='order-history' element={<OrderHistory/>}/>
         <Route path='dashpass' element={<DashPass/>}/>
         <Route path='benefits' element={<BenefitsPopUp/>}/>
-        <Route path='home' element={<HomePage/>}/>
+        <Route path='/' element={<HomePage/>}/>
+        <Route path='RestaurantCard' element={<RestaurantCard/>}/>
+        <Route path='Coupons' element={<Coupons/>}/>
       </Routes>
-      <VerticalNavbar />
-      <RestaurantCard />
-      <Coupons/>
     </div>
     
   );
